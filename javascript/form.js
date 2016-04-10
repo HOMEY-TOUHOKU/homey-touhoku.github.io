@@ -13,7 +13,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "",
+            url: "http://homey.php.xdomain.jp/",
             dataType: "json",
             success: function(msg) {
                 alert("データの送信に成功しました。ありがとうございます。");
