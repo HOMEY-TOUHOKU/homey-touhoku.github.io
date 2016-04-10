@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "honoka";
+    src: url('../fonts/honoka.eot'),
+         url('../fonts/honoka.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    font-family: "honoka", "Meiryo UI" , "メイリオ" , Meiryo, sans-serif;
+    color: #263238;
+}
+
+header {
+    width: 100%;
+    padding-top: 0;
+    color: white;
+    z-index: 1;
+}
+
+header .titleArea {
+    text-align: center;
+    position: relative;
+    line-height: 1.5;
+
+    /* top - title間のmargin */
+    margin-top: 120px;
+    margin-bottom: 160px;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    font-size: 2.6rem;
+}
+
+header .sub-title {
+    font-size: 2rem;
+    font-size: 1.3rem;
+}
+
+header nav {
+    background: rgba(0,0,0,0.2);
+}
+
+.navbar-toggle {
+    border: 1px solid white;
+}
+
+.navbar-toggle span{
+    background: white;
+}
+
+header nav ul li a{
+    font-size: 22px;
+    color: white;
+}
+
+header nav ul .nav0 a{
+    background: rgba(229,115,115 ,0.6);
+}
+
+header nav ul .nav0 a:hover{
+    background: rgba(229,115,115 ,1);
+    color: white;
+}
+
+header nav ul .nav1 a{
+   background: rgba(255,183,77 ,0.6);
+}
+
+header nav ul .nav1 a:hover{
+   background: rgba(255,183,77 ,1);
+   color: white;
+}
+
+header nav ul .nav2 a{
+    background: rgba(255,241,118 ,0.6);
+}
+
+header nav ul .nav2 a:hover{
+    background: rgba(255,241,118 ,1);
+    color: white;
+}
+
+header nav ul .nav3 a{
+    background: rgba(129,199,132 ,0.6);
+}
+
+header nav ul .nav3 a:hover{
+    background: rgba(129,199,132 ,1);
+    color: white;
+}
+
+header nav ul .nav4 a{
+    background: rgba(100,181,246 ,0.6);
+}
+
+header nav ul .nav4 a:hover{
+    background: rgba(100,181,246 ,1);
+    color: white;
+}
+
+header nav ul .nav5 a{
+    background: rgba(186,104,200 ,0.6);
+}
+
+header nav ul .nav5 a:hover{
+    background: rgba(186,104,200 ,1);
+    color: white;
+}
+
+main {
+    width: 100%;
+    position: relative;
+
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    background: white;
+    z-index: 1;
+}
+
+.read {
+    margin-bottom: 160px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+dt {
+    font-size:24px;
+    line-height: 2;
+}
+
+dd {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+/* for staff list */
+
+
+
+.staff dt {
+    text-align: center;
+}
+
+.staff dd ul {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+}
+
+.staff dd ul li {
+    line-height: 1.5;
+}
+
+textarea {
+    margin-bottom: 60px;f
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.confirm-heading {
+margin-bottom: 20px;
+}
+
+
+section {
+    margin-bottom: 120px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about .imgArea {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.about img {
+    width: 100%;
+    max-width: 360px;
+    text-align:center;
+}
+
+.imgArea img {
+    text-align: center;
+}
+
+.newsList , aside{
+    border: 1px solid #90A4AE;
+    font-size: 20px;
+}
+
+
+
+.newsList li {
+    border-bottom: 1px solid #90A4AE;
+    padding:40px;
+    padding:20px;
+}
+
+.newsList li:last-child{
+    border: none;
+}
+
+.newsList a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: underline;
+}
+
+.news-meta {
+    margin-bottom: 1rem;
+}
+
+.news-content {
+
+}
+
+footer {
+    width: 100%;
+    min-height: 140px;
+    position: relative;
+    background: #7E8C8D;
+    padding-top:60px;
+}
+
+footer ul li {
+    text-align: center;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 18px;
+}
+
+.fixedBack {
+    min-height: 400px;
+    max-height: 100vh;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    header .sub-title {
+        font-size: 2rem;
+    }
+
+    .read {
+        font-size: 20px;
+    }
+
+    section p {
+        font-size: 20px;
+    }
+}

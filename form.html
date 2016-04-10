@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LGBT - HOMEY</title>
+    <link href="stylesheet/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet/my-bootstrap.css" rel="stylesheet">
+    <link href="stylesheet/reset.css" rel="stylesheet">
+    <link href="stylesheet/common.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">入力内容確</h4>
+      </div>
+      <div class="modal-body">
+        <h5 class="confirm-heading">以下の内容で送信してもよろしいですか？</h5>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name2" class="col-sm-2 control-label">お名前 : </label>
+                <div class="col-sm-10">
+                    <input type="text" name="name2" id="name2" class="form-control" disabled="disabled">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email2" class="col-sm-2 control-label">メールアドレス : </label>
+                <div class="col-sm-10">
+                    <input type="email" name="email2" id="email2" class="form-control" disabled="disabled">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message2" class="col-sm-2 control-label">メッセージ : </label>
+                <div class="col-sm-10">
+                    <textarea name="message2" id="message2" rows="10" class="form-control" disabled="disabled"></textarea>
+                </div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary" id="send">メールとして送信!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fixedBack"></div>
+
+<header role="banner">
+    <div class="inner">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#g-nav" aria-expanded="false" aria-controls="g-nav"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="g-nav">
+              <ul class="nav navbar-nav">
+                <li class="nav0 active"><a href="index.html">HOME</span></a></li>
+                <li class="nav1"><a href="about.html">HOMEYについて</a></li>
+                <li class="nav2"><a href="news.html">お知らせ</a></li>
+                <li class="nav3"><a href="form.html">お問い合わせ</a></li>
+                <li class="nav4"><a href="http://ameblo.jp/tokotokoami/">ブログ</a></li>
+                <li class="nav5"><a href="link.html">リンク</a></li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          <!-- /.container-fluid -->
+          </div>
+        </nav>
+
+        <div class="titleArea">
+        <h1>HOMEYへようこそ!</h1>
+        <div class="sub-title">～LGBTQ中高生が集まれる場所を～</div>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="about">
+        <h2>お問い合わせ</h2>
+
+        <p class="read">
+        ご意見、メッセージ等ありましたら気軽にどうぞ!!<br>
+        交流会の参加申し込みもこちらから!<br>
+        ※ここに入力されたデータはメールの内容としてHOMEYのメールアドレスに送信されます。
+        </p>
+
+        <div class="container">
+            <div class="row">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">お名前 : </label>
+                        <div class="col-sm-10">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="お名前">
+                        </div>
+                        <p class="help-block pull-right"><small>*ニックネームでも構いません。</small></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">メールアドレス : </label>
+                        <div class="col-sm-10">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="example@email.com">
+                        </div>
+                        <p class="help-block pull-right"><small>*返信用に使用いたします。</small></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="col-sm-2 control-label">メッセージ : </label>
+                        <div class="col-sm-10">
+                            <textarea name="message" id="message" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                   <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="button" id="confirm" class="btn btn-primary submit-button" data-toggle="modal" data-target="#myModal">確認画面へ</button>
+                    </div>
+                  </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer role="contantinfo">
+  <div class="container">
+  <ul>
+    <li class="col-sm-2"><a href="index.html">HOME</a></li>
+    <li class="col-sm-2"><a href="about.html">HOMEYについて</a></li>
+    <li class="col-sm-2"><a href="news.html">お知らせ</a></li>
+    <li class="col-sm-2"><a href="form.html">お問い合わせ</a></li>
+    <li class="col-sm-2"><a href="http://ameblo.jp/tokotokoami/">ブログ</a></li>
+    <li class="col-sm-2"><a href="link.html">リンク</a></li>
+  </ul>
+  </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="javascript/jquery-1.12.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/form.js"></script>
+</body>
+</html>

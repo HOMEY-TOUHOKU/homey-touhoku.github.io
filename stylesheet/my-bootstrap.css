@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+i {
+    font-size: 1.3em;
+    color: inherit;
+}
+.navbar .navbar-inner {
+    padding: 0;
+}
+
+.navbar .nav {
+    margin: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    #g-nav {
+        padding: 0;
+    }
+
+    .navbar .nav li a{
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .navbar .nav {
+        display: table;
+    }
+
+    .navbar .nav li {
+        display: table-cell;
+        float: none;
+    }
+
+}
+
+.navbar .nav li a {
+    text-align: center;
+}
+
+.navbar .nav li:last-child a {
+    border-radius: 0 3px 3px 0;
+}
+
+.navbar-default {
+    opacity: 0.8;
+}
