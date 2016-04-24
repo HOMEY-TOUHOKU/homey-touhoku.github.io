@@ -27,11 +27,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="g-nav">
               <ul class="nav navbar-nav">
-                <li class="nav0 active"><a href="index.html">HOME</span></a></li>
+                <li class="nav0"><a href="index.html">HOME</span></a></li>
                 <li class="nav1"><a href="about.html">HOMEYについて</a></li>
-                <li class="nav2"><a href="news.html">お知らせ</a></li>
+                <li class="nav2 active"><a href="news.html">お知らせ</a></li>
                 <li class="nav3"><a href="form.html">お問い合わせ</a></li>
-                <li class="nav4"><a href="http://ameblo.jp/tokotokoami/">ブログ</a></li>
+                <li class="nav4"><a href="http://ameblo.jp/tokotokoami/" target="_blank">ブログ</a></li>
                 <li class="nav5"><a href="link.html">リンク</a></li>
               </ul>
             </div>
@@ -50,23 +50,15 @@
 <main role="main">
 
     <section class="about">
-        <h2 id="single-title">ナベシャツお譲りします</h2>
+        <h2 id="single-title"></h2>
 
         <div class="container">
             <div class="row">
-              <p id="single-content">　交流会に参加した方から中古のナベシャツ(※)を4着いただきました。欲しい方がいましたら、無料でお譲りいたします。<br><br>
-　このホームページのお問い合わせに、名前(通称名可)と欲しいナベシャツを書いてご連絡ください。<br><br>
-　受け渡し方法は原則、交流会が開催される日に会場に来ていただき、そこでの手渡しとさせていただきたいと思います。<br>
-実物を見たい等ありましたら、お問い合わせください。<br><br>
-
-※ナベシャツとは、胸を平らにすることを目的に作られた衣服(体型補正用の下着)のことです。胸を押さえ、胸が平らになり、胸が無いように見せる効果があります。</p>
-
-              <div id="single-imageArea">
-                <img src="images/rainbow.jpg">
-                <p>
-              </div>
-
+              <p id="single-content"></p>
+              <div id="single-imageArea" class="row"></div>
             </div>
+           <time id="single-created"></time>
+           <p id="single-author"></p>
         </div>
     </section>
 </main>
@@ -78,17 +70,18 @@
     <li class="col-sm-2"><a href="about.html">HOMEYについて</a></li>
     <li class="col-sm-2"><a href="news.html">お知らせ</a></li>
     <li class="col-sm-2"><a href="form.html">お問い合わせ</a></li>
-    <li class="col-sm-2"><a href="http://ameblo.jp/tokotokoami/">ブログ</a></li>
+    <li class="col-sm-2"><a href="http://ameblo.jp/tokotokoami/" target="_blank">ブログ</a></li>
     <li class="col-sm-2"><a href="link.html">リンク</a></li>
   </ul>
   </div>
+  <p class="copy-right"><small>(c) 2016 HOMEY</small></p>
 </footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="javascript/jquery-1.12.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="javascript/bootstrap.min.js"></script>
-<script src="javascript/index.js"></script>
+<script src="javascript/single.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -10,7 +10,7 @@ $(function() {
                 var code = '';
 
                 for(var i = 0; i < data.length; i++) {
-                    code += '<li><a href="single.html?id=' + data[i]['id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
+                    code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
                 }
 
                 $('.newsList').html(code);

@@ -244,25 +244,29 @@ margin-bottom: 60px;
     margin-bottom: 1rem;
 }
 
-.news-content {
-
-}
-
 footer {
     width: 100%;
     min-height: 140px;
     position: relative;
     background: #7E8C8D;
-    padding-top:60px;
+    padding-top:40px;
 }
 
 footer ul li {
     text-align: center;
+    line-height: 3;
 }
 
 footer ul li a {
     color: white;
     font-size: 18px;
+}
+
+.copy-right {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .fixedBack {
@@ -279,6 +283,13 @@ footer ul li a {
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 0;
+}
+
+#single-created, #single-author {
+    text-align: right;
+    display: block;
+    width: 100%;
+    line-height: 2;
 }
 
 #single-content {

@@ -1,9 +1,10 @@
 $(function() {
 
-  var id = getQueryString();
+  var id = getQueryString()['id'];
 
   // idが数字だったら、true
-  if(isFinite(id)) {
+  if(!isFinite(id)) {
+    console.log('return false');
     return false;
   }
 
@@ -15,13 +16,33 @@ $(function() {
         console.log('success');
         console.log(data);
 
+        $('#single-title').text(data['title']);
+        $('#single-content').text(data['content']);
+
+        var str = $('#single-content').text();
+        $('#single-content').html(str.replace(/\r?\n/g, '<br>'));
+
         var code = '';
 
-        for(var i = 0; i < data.length; i++) {
-            code += '<li><a href="single.html?id=' + data[i]['id'] + '">' + data[i]['created'] + ' ' + data[i]['content'] + '</a></li>';
+        for(var i = 0; i < data['images_num']; i++) {
+            // data['images'][i]['image_src'];
+            // data['images'][i]['image_alt'];
+
+            code += '<div class="col-sm-6 col-md-4">';
+            code += '<div class="thumbnail">';
+            code += '<img src="' + data['images'][i]['image_src'] + '" alt="' + data['images'][i]['image_alt'] + '">';
+            code += '<div class="caption">';
+            code += '<h3>' + data['images'][i]['image_alt'] + '</h3>';
+            code += '</div>';
+            code += '</div>';
+            code += '</div>';
         }
 
-        $('.newsList').html(code);
+        console.log(code);
+
+        $('#single-imageArea').html(code);
+        $('#single-created').text(data['created']);
+        $('#single-author').text(data['author']);
     },
     error: function(e) {
         console.log(e);
