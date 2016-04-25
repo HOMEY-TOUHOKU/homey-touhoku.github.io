@@ -9,8 +9,14 @@ $(function() {
 
                 var code = '';
 
-                for(var i = 0; i < data.length; i++) {
-                    code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
+                if(!data && data.length != 0) {
+
+                    for(var i = 0; i < data.length; i++) {
+                        code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
+                    }
+                }
+                else {
+                    code = 'お知らせはありません';
                 }
 
                 $('.newsList').html(code);
