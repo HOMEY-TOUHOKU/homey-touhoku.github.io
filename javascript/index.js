@@ -9,13 +9,10 @@ $(function() {
 
                 var code = '';
 
-                if(!data && data.length != 0) {
-
-                    for(var i = 0; i < data.length; i++) {
-                        code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
-                    }
+                for(var i = 0; i < data.length; i++) {
+                    code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
                 }
-                else {
+                if(data.length == 0) {
                     code = 'お知らせはありません';
                 }
 
