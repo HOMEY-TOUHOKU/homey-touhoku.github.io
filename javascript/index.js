@@ -21,7 +21,7 @@ $(function() {
         });
    $.ajax({
             type: "GET",
-            url: "http://homey.php.xdomain.jp/news_image/3-1.json",
+            url: "http://homey.php.xdomain.jp/news_image/3-1.png",
             success: function(data) {
                 console.log('success');
                 console.log(data);
