@@ -19,15 +19,4 @@ $(function() {
                 console.log(e);
             }
         });
-   $.ajax({
-            type: "GET",
-            url: "http://homey.php.xdomain.jp/news_image/4-1",
-            success: function(data) {
-                console.log('success');
-                console.log(data);
-            },
-            error: function(e) {
-                console.log(e);
-            }
-        }); 
 });
