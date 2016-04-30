@@ -23,7 +23,7 @@ $(function() {
             success: function(msg) {
                 console.log(msg);
 
-                if(msg['result'] == true)
+                if(msg['result'] == true) {
                     alert("データの送信に成功しました。ありがとうございます。");
                     location.reload();
                 }
