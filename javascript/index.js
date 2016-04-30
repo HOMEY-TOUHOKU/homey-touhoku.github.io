@@ -13,6 +13,10 @@ $(function() {
                     code += '<li><a href="single.html?id=' + data[i]['news_id'] + '">' + data[i]['created'] + ' ' + data[i]['title'] + '</a></li>';
                 }
 
+                if(data.length == 0) {
+                    code = '<div class="alert alert-info" role="alert">現在新たなお知らせはありません。</div>';
+                }
+
                 $('.newsList').html(code);
             },
             error: function(e) {
