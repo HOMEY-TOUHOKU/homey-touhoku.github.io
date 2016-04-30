@@ -18,7 +18,7 @@ $(function() {
                 "name" : $('#name2').val(),
                 "email" : $('#email2').val(),
                 "message" : $('#message2').val()
-            }
+            },
             dataType: "json",
             success: function(msg) {
                 console.log(msg);
