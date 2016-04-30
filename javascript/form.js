@@ -21,6 +21,8 @@ $(function() {
             }
             dataType: "json",
             success: function(msg) {
+                console.log(msg);
+
                 if(msg['result'] == true)
                     alert("データの送信に成功しました。ありがとうございます。");
                     location.reload();
@@ -31,6 +33,7 @@ $(function() {
             },
             error: function(e) {
                 err_alert();
+                console.log(e);
             }
 
         });
