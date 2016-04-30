@@ -13,17 +13,30 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "http://homey.php.xdomain.jp/",
+            url: "http://homey.php.xdomain.jp/mailSender.php",
+            data: {
+                "name" : $('#name2').val(),
+                "email" : $('#email2').val(),
+                "message" : $('#message2').val()
+            }
             dataType: "json",
             success: function(msg) {
-                alert("データの送信に成功しました。ありがとうございます。");
-                location.reload();
+                if(msg['result'] == true)
+                    alert("データの送信に成功しました。ありがとうございます。");
+                    location.reload();
+                }
+                else {
+                    err_alert();
+                }
             },
             error: function(e) {
-                alert("データの送信に失敗しました。お手数ですが、もう一度送信していただくか、直接私たちのメールアドレスに連絡してください。")
+                err_alert();
             }
 
         });
-
     });
+
+    function err_alert() {
+        alert("データの送信に失敗しました。お手数ですが、もう一度送信していただくか、直接メールアドレスに連絡してください。")
+    }
 });
