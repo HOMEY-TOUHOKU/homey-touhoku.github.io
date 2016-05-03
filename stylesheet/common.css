@@ -134,11 +134,15 @@ main {
     z-index: 1;
 }
 
-.read {
+.readArea {
     margin-bottom: 160px;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.7;
     text-align: center;
+}
+
+.readArea p {
+    margin-bottom: 1em;
 }
 
 dt {
@@ -197,14 +201,15 @@ section h2 {
 }
 
 section p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 1em;
 }
 
 .about .imgArea {
-text-align: center;
-margin-bottom: 60px;
-}
+    text-align: center;
+    margin-bottom: 60px;
+ }
 
 .about img {
     width: 100%;
@@ -313,11 +318,15 @@ footer ul li a {
         font-size: 2rem;
     }
 
-    .read {
-        font-size: 20px;
+    .readArea {
+        font-size: 22px;
     }
 
     section p {
-        font-size: 20px;
+        font-size: 22px;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
     }
 }

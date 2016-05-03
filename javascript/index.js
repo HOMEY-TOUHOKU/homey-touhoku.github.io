@@ -14,7 +14,7 @@ $(function() {
                 }
 
                 if(data.length == 0) {
-                    code = '<div class="alert alert-info" role="alert">現在新たなお知らせはありません。</div>';
+                    code = '<li class="alert alert-info" role="alert">現在新たなお知らせはありません。</li>';
                 }
 
                 $('.newsList').html(code);
