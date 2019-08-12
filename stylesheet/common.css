@@ -186,9 +186,8 @@ textarea {
 }
 
 .confirm-heading {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
 
 section {
     margin-bottom: 120px;
@@ -200,10 +199,20 @@ section h2 {
     margin-bottom: 50px;
 }
 
-section p {
+section.news h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+section p, .content, section.news .newsList li div {
     font-size: 20px;
     line-height: 1.7;
     margin-bottom: 1em;
+}
+
+section.news time {
+    font-size: 16px;
 }
 
 .about .imgArea {
@@ -221,7 +230,7 @@ section p {
     text-align: center;
 }
 
-.newsList , aside{
+section:not(.news) .newsList, aside{
     border: 1px solid #90A4AE;
     font-size: 20px;
 }
@@ -230,11 +239,25 @@ section p {
     margin: 20px;
 }
 
-
-.newsList li {
+section:not(.news) .newsList li:not(.alert) {
     border-bottom: 1px solid #90A4AE;
-    padding:40px;
     padding:20px;
+}
+
+section.news .newsList li {
+    padding: 40px;
+    border: 1px solid #90A4AE;
+    margin-bottom: 60px;
+}
+
+section.news .newsList li.alert {
+    padding: 20px;
+    border: none;
+}
+
+.prev-news {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .newsList li:last-child{
@@ -245,7 +268,6 @@ section p {
     display: block;
     width: 100%;
     height: 100%;
-    text-decoration: underline;
 }
 
 .news-meta {

@@ -9,9 +9,10 @@ $(function() {
                 item.description
                 item.link
                 const created = new Date(item.created);
-                const date = `${created.getFullYear()}年${created.getMonth() + 1}月${created.getDate()}日`;
+                const date = `${created.getFullYear()}-${created.getMonth() + 1}-${created.getDate()}`;
+                const date_jp = `${created.getFullYear()}年${created.getMonth() + 1}月${created.getDate()}日`;
 
-                return `<li><section><h3>${date} ${item.title}</h3>${item.description}</li></section>`;
+                return `<li><section><h3><a href="${item.link}">${item.title}</a></h3><p><time datetime="${date}">${date_jp}</time></p><div class="content">${item.description}</div></li></section>`;
             }).join(''));
         },
         error: function(e) {
