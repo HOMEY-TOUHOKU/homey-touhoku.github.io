@@ -315,21 +315,6 @@ footer ul li a {
     z-index: 0;
 }
 
-#single-created, #single-author {
-    text-align: right;
-    display: block;
-    width: 100%;
-    line-height: 2;
-}
-
-#single-content {
-    margin-bottom: 2em;
-}
-
-#single-imageArea {
-    text-align: center;
-}
-
 @media (min-width: 768px) {
 
     header h1 {
