@@ -260,7 +260,7 @@ section.news .newsList li.alert {
     text-align: center;
 }
 
-.newsList li:last-child{
+section.container .newsList li:last-child{
     border: none;
 }
 
