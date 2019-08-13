@@ -21,7 +21,7 @@ exports.blog = functions.https.onRequest((request, response) => {
 });
 
 exports.send_mail = functions.https.onRequest(async (request, response) => {
- cors(request, response, () => {
+ cors(request, response, async () => {
   if (request.method !== 'POST') {
    response.status(405).send('Method Not Allowed');
    return;
