@@ -21,28 +21,30 @@ exports.blog = functions.https.onRequest((request, response) => {
 });
 
 exports.send_mail = functions.https.onRequest(async (request, response) => {
- if (request.method !== 'POST') {
-  response.status(405).send('Method Not Allowed');
-  return;
- }
-
- let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true, // true for 465, false for other ports
-  auth: {
-   user: functions.config().api.mail_user, // generated ethereal user
-   pass: functions.config().api.mail_pass // generated ethereal password
+ cors(request, response, () => {
+  if (request.method !== 'POST') {
+   response.status(405).send('Method Not Allowed');
+   return;
   }
- });
 
- // send mail with defined transport object
- let info = await transporter.sendMail({
-  from: functions.config().api.mail_user, // sender address
-  to: functions.config().api.mail_user, // list of receivers
-  subject: "HOMEY お問い合わせフォームより", // Subject line
-  text: `${request.body.message}\n\n---\n\n送信者: ${request.body.name}\n送信者のメールアドレス: ${request.body.email}` // plain text body
- });
+  let transporter = nodemailer.createTransport({
+   host: "smtp.gmail.com",
+   port: 465,
+   secure: true, // true for 465, false for other ports
+   auth: {
+    user: functions.config().api.mail_user, // generated ethereal user
+    pass: functions.config().api.mail_pass // generated ethereal password
+   }
+  });
 
- response.send({status: true});
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+   from: functions.config().api.mail_user, // sender address
+   to: functions.config().api.mail_user, // list of receivers
+   subject: "HOMEY お問い合わせフォームより", // Subject line
+   text: `${request.body.message}\n\n---\n\n送信者: ${request.body.name}\n送信者のメールアドレス: ${request.body.email}` // plain text body
+  });
+
+  response.send({status: true});
+ });
 });
