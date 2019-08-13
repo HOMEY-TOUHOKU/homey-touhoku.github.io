@@ -19,23 +19,14 @@ $(function() {
                 "message" : $('#message2').val()
             },
             dataType: "json",
-            success: function(msg) {
-                if(msg == true) {
-                    alert("データの送信に成功しました。ありがとうございます。");
-                    location.reload();
-                }
-                else {
-                    err_alert();
-                }
+            success: function() {
+                alert("データの送信に成功しました。ありがとうございます。");
+                location.reload();
             },
             error: function(e) {
-                err_alert();
+                alert("データの送信に失敗しました。お手数ですが、もう一度送信していただくか、homeytouhoku@gmail.comに連絡してください。");
                 console.log(e);
             }
         });
     });
-
-    function err_alert() {
-        alert("データの送信に失敗しました。お手数ですが、もう一度送信していただくか、直接メールアドレス(homeytouhoku@gmail.com)に連絡してください。")
-    }
 });
