@@ -43,12 +43,10 @@ header .titleArea {
 }
 
 header h1 {
-    font-size: 3.2rem;
     font-size: 2.6rem;
 }
 
 header .sub-title {
-    font-size: 2rem;
     font-size: 1.3rem;
 }
 
@@ -178,7 +176,7 @@ small {
 }
 
 textarea {
-    margin-bottom: 60px;f
+    margin-bottom: 60px;
 }
 
 .submit-button {
@@ -270,6 +268,10 @@ section.container .newsList li:last-child{
     height: 100%;
 }
 
+.newsList img {
+    max-width: 100%;
+}
+
 .news-meta {
     margin-bottom: 1rem;
 }
@@ -316,7 +318,6 @@ footer ul li a {
 }
 
 @media (min-width: 768px) {
-
     header h1 {
         font-size: 3.2rem;
     }
@@ -328,12 +329,6 @@ footer ul li a {
     .readArea {
         font-size: 22px;
     }
-
-/*
-    section p {
-        font-size: 22px;
-    }
-    */
 
     section h2 {
         font-size: 2.2rem;
