@@ -4,9 +4,7 @@ const cors = require('cors')({origin: true});
 const nodemailer = require("nodemailer");
 
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
+// アメブロのRSSを取得してお知らせ画面に表示
 exports.blog = functions.https.onRequest((request, response) => {
  cors(request, response, () => {
   Feed.load('http://rssblog.ameba.jp/tokotokoami/rss20.xml', (err, rss) => {
@@ -20,6 +18,7 @@ exports.blog = functions.https.onRequest((request, response) => {
  });
 });
 
+// メールアドレス隠蔽のため, お問合せフォームの内容をgmailにforwarding
 exports.send_mail = functions.https.onRequest(async (request, response) => {
  cors(request, response, async () => {
   if (request.method !== 'POST') {
