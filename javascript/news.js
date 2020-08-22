@@ -1,7 +1,7 @@
 $(function() {
     $.ajax({
         type: "GET",
-        url: "https://us-central1-homey-touhoku.cloudfunctions.net/blog",
+        url: "https://us-central1-homeytouhoku-website.cloudfunctions.net/blog",
         dataType: "json",
         success: function(data) {
 
