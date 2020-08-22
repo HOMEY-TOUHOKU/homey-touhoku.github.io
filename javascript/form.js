@@ -12,7 +12,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "https://us-central1-homey-touhoku.cloudfunctions.net/send_mail",
+            url: "https://us-central1-homeytouhoku-website.cloudfunctions.net/send_mail",
             data: {
                 "name" : $('#name2').val(),
                 "email" : $('#email2').val(),
