@@ -12,7 +12,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "https://8wvww12zeh.execute-api.ap-northeast-1.amazonaws.com",
+            url: "https://8wvww12zeh.execute-api.ap-northeast-1.amazonaws.com/default/send_email",
             data: {
                 "name" : $('#name2').val(),
                 "email" : $('#email2').val(),
