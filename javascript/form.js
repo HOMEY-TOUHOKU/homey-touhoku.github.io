@@ -12,7 +12,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "https://us-central1-homeytouhoku-website.cloudfunctions.net/send_mail",
+            url: "https://8wvww12zeh.execute-api.ap-northeast-1.amazonaws.com",
             data: {
                 "name" : $('#name2').val(),
                 "email" : $('#email2').val(),
@@ -20,11 +20,11 @@ $(function() {
             },
             dataType: "json",
             success: function() {
-                alert("データの送信に成功しました。ありがとうございます。");
+                alert("メッセージの送信に成功しました!");
                 location.reload();
             },
             error: function(e) {
-                alert("データの送信に失敗しました。お手数ですが、もう一度送信していただくか、homeytouhoku@gmail.comに連絡してください。");
+                alert("メッセージの送信に失敗しました... 時間をおいてからもう一度送信していただくか、homeytouhoku@gmail.com に直接メールで連絡いただけると嬉しいです。");
                 console.log(e);
             }
         });
