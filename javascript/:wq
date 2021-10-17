@@ -20,7 +20,7 @@ $(function() {
             },
             dataType: "json",
             success: function() {
-                alert("メッセージの送信に成功しました!");
+                alert("メッセージの送信に成功しました。ありがとうございます。");
                 location.reload();
             },
             error: function(e) {
