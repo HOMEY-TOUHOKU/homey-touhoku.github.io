@@ -1,8 +1,9 @@
 import boto3
+import base64
 import json
+import urllib.parse
 
 print('Loading function')
-dynamo = boto3.client('dynamodb')
 
 SRC_MAIL = ""
 DST_MAIL = ""
@@ -34,23 +35,21 @@ def send_email(source, to, subject, body):
 
 def respond():
     return {
-        'status': True
+        'statusCode': 200,
+        'body': json.dumps({"status": True})
     }
 
 def lambda_handler(event, context):
-    print(event)
+    query_string = base64.b64decode(event['body']).decode()
     
-    body = json.loads(event['body'])
+    body = urllib.parse.parse_qs(query_string)
     
-    if event['httpMethod'] != 'POST':
-        return {
-            'statusCode': 405
-        }
-        
-    # name, email, message in body
+    name = urllib.parse.unquote(body['name'][0])
+    email = urllib.parse.unquote(body['email'][0])
+    message = urllib.parse.unquote(body['message'][0])
+    
     subject = "HOMEY お問い合わせフォームより"
-    message = f"{body['message']}\n\n---\n\n送信者: {body['name']}\n送信者のメールアドレス: {body['email']}"
+    message = f"{message}\n\n---\n\n送信者: {name}\n送信者のメールアドレス: {email}"
     r = send_email(SRC_MAIL, DST_MAIL, subject, message)
 
     return respond()
-
